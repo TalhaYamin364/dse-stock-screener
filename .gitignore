@@ -24,6 +24,10 @@ Thumbs.db
 # Copilot instructions (personal, not shared)
 .github/copilot-instructions.md
 
+# AI context files (local only)
+CONTEXT.md
+tasks.md
+
 # Environment variables (personal config)
 .env
 
