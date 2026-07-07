@@ -26,3 +26,9 @@ Thumbs.db
 
 # Environment variables (personal config)
 .env
+
+# Trade journal (personal financial data)
+trades.csv
+
+# Personal learning notes
+learning-tracker.md

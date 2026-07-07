@@ -20,6 +20,7 @@ scraper.py → analyzer.py → allocator.py → verify.py
 | `analyzer.py` | Scores stocks on volatility, dividends, liquidity, P/E | `output/analyzed_stocks.csv` |
 | `allocator.py` | Equal-weight allocation across top diversified picks | `output/recommendations.csv` |
 | `verify.py` | Re-fetches live prices, confirms nothing changed | `output/verification_report.txt` |
+| `tracker.py` | Portfolio snapshot — live P&L, sell/hold signals | `output/snapshots.csv` |
 
 ## Quick Start
 
@@ -106,6 +107,8 @@ dse-stock-screener/
 ├── analyzer.py        # Stability scoring engine
 ├── allocator.py       # Portfolio allocation
 ├── verify.py          # Pre-trade verification
+├── tracker.py         # Portfolio tracker (reads trades.csv, fetches live prices)
+├── trades.csv         # Trade journal — all buys/sells (gitignored, personal)
 ├── requirements.txt   # Python dependencies
 ├── .env.example       # Template for personal config
 ├── .env               # Your personal config (gitignored)
@@ -115,6 +118,7 @@ dse-stock-screener/
 │   ├── test_scraper.py
 │   └── test_config.py
 └── output/            # Generated CSVs (gitignored)
+    └── snapshots.csv  # Appended daily by tracker.py
 ```
 
 ## Disclaimer
